@@ -13,9 +13,10 @@ $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $p
 
 if ($_SERVER['REQUEST_METHOD'] == 'GET'){
   if (isset($_GET['country']) && isset($_GET['context']) && !empty($_GET['country'])){
-    $country= trim(filter_input($_GET['country'], FILTER_SANITIZE_STRING));
+    $country= ucwords(trim(filter_input($_GET['country'], FILTER_SANITIZE_STRING))) ;
     $stmt = $conn->query("SELECT * FROM countries WHERE name LIKE '%$country%'");
-    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);  }
+    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);  
+  }
 
 }
 
