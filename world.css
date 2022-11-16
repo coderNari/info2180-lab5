@@ -1,1 +1,27 @@
 /* Add your own styles */
+
+header{
+    background-color: antiquewhite;
+    align-content: center;
+    text-align: center ;
+    padding: 25px;
+    margin-bottom: 25px;
+}
+
+body{   
+    margin: 5;
+    background-color: rgb(147, 233, 255);
+}
+
+#controls {
+    size: 30px;
+    margin-left: 35%;
+}
+
+img{
+    width: 90%;
+    float: inline-start;
+    /* width: 1400px; */
+    height: 500px;
+    padding: 30px;
+}
